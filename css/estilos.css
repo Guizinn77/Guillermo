@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: serif;
+}
+
+header {
+    padding: 5px;
+    background-color: rgb(9, 40, 65);
+    color: rgb(105, 204, 243);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    gap: 100px;
+}
+
+h1 {
+    /* text-align: center; */
+    font-size: 55px;
+    width: 100%;
+
+}
+
+.img-header {
+    width: 150px;
+    height: 150px;
+    border: 5px solid rgb(105, 204, 243);
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+    padding: 10px 40px; /* ajuste de espaço interno */
+    font-size: 17px;
+    color: rgb(122, 211, 247);
+    background-color: rgb(15, 60, 97);
+}
+
+.lista-horizontal {
+    display: flex;
+    flex-wrap: wrap; /* permite quebra de linha em telas pequenas */
+    justify-content: center;
+    gap: 20px; /* espaço entre os itens */
+    list-style: none;
+    padding: 20px 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(122, 211, 247);
+}
+
+.img-section {
+    display: block; /* O elemento vira um bloco completo, em nova linha. */
+    margin: 0 auto 20px;
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Isso centraliza o meio da tela, com 0 de margem vertical e margens automáticas à esquerda e direita. */
+    /* margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; */
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: rgb(9, 40, 65);
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-img {
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(15, 60, 97);
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 0;
+}
+
+.footer-img a {
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+    align-items: center;    /* centraliza horizontalmente */
+    color: rgb(122, 211, 247);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer-img a:hover {
+    color: white;
+}
+
+.footer-img img {
+    width: 35px;
+    height: 35px;
+}
+
+/* RESPONSIVO PARA CELULAR*/
+@media (max-width: 768px) { /* usada para aplicar estilos somente quando a largura da tela for menor ou igual a 768px */
+    .header-content {
+        flex-direction: column; /* Itens na vertical (de cima para baixo) */
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-img {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* RESPONSIVO PARA TV */
+@media (min-width: 1400px) {
+    .header-content {
+        flex-direction: row; /* Itens na horizontal (lado a lado) */
+        gap: 40px;           /* Mais espaçamento entre os elementos */
+        padding: 20px 60px;  /* Espaço interno maior */
+    }
+
+    h1 {
+        font-size: 60px;     /* Fonte maior para ficar legível de longe */
+    }
+
+    ul {
+        flex-direction: row; /* Lista em linha, como um menu horizontal */
+        gap: 30px;
+        font-size: 24px;     /* Tamanho de fonte maior */
+    }
+
+    .footer-img {
+        flex-direction: row; /* Imagens lado a lado */
+        gap: 40px;
+        justify-content: center;
+    }
+
+    body {
+        font-size: 22px;     /* Tamanho base maior para TV */
+        line-height: 1.6;
+    }
+}
